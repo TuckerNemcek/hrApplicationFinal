@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9883fda-5a33-4b20-a101-8a3e01a77887" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/controllers/VehicleMakeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/domain/VO/VehicleMakeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vehicleMakes/VehicleMakeMain.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vehicleMakes/vehicleMakeAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vehicleMakes/vehicleMakeEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vehicleMakes/vehicleMakeList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vehicleMakes/vehicleMake_sidebar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/bootswatch_superhero.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/controllers/VehicleMakeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/controllers/VehicleMakeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/domain/VO/VehicleMakeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/domain/VO/VehicleMakeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/domain/VehicleMake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hrApplicationFinal/domain/VehicleMake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vehicleMakes/VehicleMakeMain.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repositories/VehicleMakeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repositories/VehicleMakeRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/hrApplicationFinal.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hrApplicationFinal/bootstrap/SeedData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hrApplicationFinal/bootstrap/SeedData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hrApplicationFinal/controllers/VehicleMakeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hrApplicationFinal/controllers/VehicleMakeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hrApplicationFinal/domain/VO/VehicleMakeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hrApplicationFinal/domain/VO/VehicleMakeVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hrApplicationFinal/domain/VehicleMake.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hrApplicationFinal/domain/VehicleMake.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT.war.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT/WEB-INF/classes/hrApplicationFinal/domain/VehicleMake.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT/WEB-INF/classes/hrApplicationFinal/domain/VehicleMake.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT/WEB-INF/jsp/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT/WEB-INF/jsp/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT/WEB-INF/jsp/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hrApplicationFinal-1.0-SNAPSHOT/WEB-INF/jsp/includes/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-repositories.VehicleMakeRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-repositories.VehicleMakeRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/repositories.VehicleMakeRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/repositories.VehicleMakeRepositoryTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +90,7 @@
     <property name="ToolWindowDatabase.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -184,6 +203,7 @@
       <workItem from="1578951958126" duration="33175000" />
       <workItem from="1579104351454" duration="1197000" />
       <workItem from="1579105587966" duration="21735000" />
+      <workItem from="1579195534318" duration="19002000" />
     </task>
     <servers />
   </component>
@@ -199,10 +219,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2495" y="156" width="1084" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1578951645549" />
-    <state x="2688" y="199" width="374" height="642" key="#com.intellij.ide.util.MemberChooser" timestamp="1579129049777">
+    <state x="2688" y="199" width="374" height="642" key="#com.intellij.ide.util.MemberChooser" timestamp="1579216689944">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2688" y="199" width="374" height="642" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579129049777" />
+    <state x="2688" y="199" width="374" height="642" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579216689944" />
     <state x="2769" y="356" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578951603325">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -211,54 +231,54 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="350" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579026890344" />
-    <state width="1874" height="199" key="GridCell.Tab.0.bottom" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.0.bottom" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.0.center" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.0.center" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.0.left" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.0.left" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.0.right" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.0.right" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.1.bottom" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.1.bottom" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.1.center" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.1.center" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.1.left" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.1.left" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="199" key="GridCell.Tab.1.right" timestamp="1579188317656">
+    <state width="1874" height="266" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="266" key="GridCell.Tab.1.right" timestamp="1579218392865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="199" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579188317656" />
-    <state width="1874" height="292" key="GridCell.Tab.2.bottom" timestamp="1579187133509">
+    <state width="1874" height="266" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579218392865" />
+    <state width="1874" height="288" key="GridCell.Tab.2.bottom" timestamp="1579217628431">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="292" key="GridCell.Tab.2.bottom/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579187133509" />
-    <state width="1874" height="292" key="GridCell.Tab.2.center" timestamp="1579187133509">
+    <state width="1874" height="288" key="GridCell.Tab.2.bottom/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579217628431" />
+    <state width="1874" height="288" key="GridCell.Tab.2.center" timestamp="1579217628431">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="292" key="GridCell.Tab.2.center/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579187133509" />
-    <state width="1874" height="292" key="GridCell.Tab.2.left" timestamp="1579187133509">
+    <state width="1874" height="288" key="GridCell.Tab.2.center/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579217628431" />
+    <state width="1874" height="288" key="GridCell.Tab.2.left" timestamp="1579217628431">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="292" key="GridCell.Tab.2.left/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579187133509" />
-    <state width="1874" height="292" key="GridCell.Tab.2.right" timestamp="1579187133509">
+    <state width="1874" height="288" key="GridCell.Tab.2.left/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579217628431" />
+    <state width="1874" height="288" key="GridCell.Tab.2.right" timestamp="1579217628431">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="292" key="GridCell.Tab.2.right/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579187133509" />
+    <state width="1874" height="288" key="GridCell.Tab.2.right/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579217628431" />
     <state x="2413" y="178" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1579122554762">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -271,6 +291,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2534" y="347" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579105587284" />
+    <state x="2646" y="435" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579214118874">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2646" y="435" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1579214118874" />
     <state x="2482" y="27" width="1358" height="889" maximized="true" key="dock-window-1" timestamp="1579108827326">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -293,6 +317,15 @@
     <state x="2386" y="120" width="978" height="800" key="spring file set editor/1920.0.1920.1080/0.27.1920.988/3840.312.1366.768@1920.0.1920.1080" timestamp="1578943770079" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hrApplicationFinal/controllers/VehicleMakeController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="myJeep" language="JAVA" />

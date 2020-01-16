@@ -17,20 +17,19 @@ public class VehicleMake {
     private String VehicleMakeName;
     private Date CreateDate;
 
-
     //CONSTRUCTORS
     public VehicleMake(){}
     public VehicleMake(int vehicleMakeId, String vehicleMakeName, Date createDate) {
-        this.setVeMakeId(vehicleMakeId);
+        this.setId(vehicleMakeId);
         this.setVehicleMakeName(vehicleMakeName);
         this.setCreateDate(createDate);
     }
 
-    public Integer getVeMakeId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setVeMakeId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

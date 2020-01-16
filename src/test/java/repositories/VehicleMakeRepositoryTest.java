@@ -28,20 +28,20 @@ public class VehicleMakeRepositoryTest {
         vehicleMake.setVehicleMakeName("Jeep");
 
         //save vehicleMake, verify it has an ID after the save.
-        assertNull(vehicleMake.getVeMakeId());
+        assertNull(vehicleMake.getId());
         vehicleMakeRepository.save(vehicleMake);
-        assertNotNull(vehicleMake.getVeMakeId());
+        assertNotNull(vehicleMake.getId());
 
         //fetch
-        VehicleMake fetchedVeMake = vehicleMakeRepository.findOne(vehicleMake.getVeMakeId());
+        VehicleMake fetchedVeMake = vehicleMakeRepository.findOne(vehicleMake.getId());
         assertNotNull(fetchedVeMake);
-        assertEquals(vehicleMake.getVeMakeId(), fetchedVeMake.getVeMakeId());
+        assertEquals(vehicleMake.getId(), fetchedVeMake.getId());
 
         //update
         fetchedVeMake.setVehicleMakeName("Honda");
         vehicleMakeRepository.save(fetchedVeMake);
 
-        VehicleMake updatedVehicleMake = vehicleMakeRepository.findOne(fetchedVeMake.getVeMakeId());
+        VehicleMake updatedVehicleMake = vehicleMakeRepository.findOne(fetchedVeMake.getId());
         assertEquals(updatedVehicleMake.getVehicleMakeName(), "Honda");
     }
 

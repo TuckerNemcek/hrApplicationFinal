@@ -6,6 +6,7 @@ hrApplicationFinal/domain/VehicleModel.class
 hrApplicationFinal/services/VehicleMakeService.class
 hrApplicationFinal/repositories/VehicleRepository.class
 hrApplicationFinal/repositories/VehicleModelRepository.class
+hrApplicationFinal/controllers/VehicleMakeController.class
 hrApplicationFinal/configuration/WebConfiguration.class
 hrApplicationFinal/controllers/IndexController.class
 hrApplicationFinal/services/VehicleModelService.class
@@ -14,6 +15,7 @@ hrApplicationFinal/domain/VehicleMake.class
 hrApplicationFinal/services/VehicleService.class
 hrApplicationFinal/services/impl/VehicleMakeServiceImpl.class
 hrApplicationFinal/configuration/MvcConfiguration.class
+hrApplicationFinal/domain/VO/VehicleMakeVO.class
 hrApplicationFinal/bootstrap/SeedData.class
 hrApplicationFinal/Application.class
 hrApplicationFinal/configuration/RepositoryConfiguration.class

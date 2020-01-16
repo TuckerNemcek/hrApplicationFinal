@@ -3,17 +3,19 @@
         <div class="navbar-header">
 <%--            HOME--%>
                 <a href="/" class="navbar-brand">HOME</a>
-            <div>
-                <ul class="nav navbar-nav">
-<%--                    PAGE LINKS--%>
-                    <li><a href="/VehicleModels"></a>Vehicle Models</li>
-                    <li><a href="/VehicleMakes"></a>Vehicle Makes</li>
-                    <li><a href="/VehicleFleet"></a>See Vehicle Fleet</li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-<%--                    LOGIN LINK--%>
-                    <li><a href="#">Login</a></li>
-                </ul>
+            </div>
+                <div>
+                    <ul class="nav navbar-nav">
+    <%--                    PAGE LINKS--%>
+                        <li><a href="/VehicleMakes/List">Vehicle Makes</a></li>
+                        <li><a href="/VehicleModels">Vehicle Models</a></li>
+                        <li><a href="/VehicleFleet">See Vehicle Fleet</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+    <%--                    LOGIN LINK--%>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
