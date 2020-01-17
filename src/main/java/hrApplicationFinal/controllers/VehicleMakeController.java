@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class VehicleMakeController {
@@ -41,14 +42,40 @@ public class VehicleMakeController {
     }
 
     @RequestMapping(value = "/VehicleMakes/Edit/{id}", method = RequestMethod.GET)
-    public String vehicleMakeEdit(@PathVariable int id, Model model) {
+    public String vehicleMakeEditGet(@PathVariable int id, Model model, VehicleMakeVO vehicleMakeVO) {
         VehicleMake vehicleMake = vehicleMakeService.getVehicleMakeById(id);
+        vehicleMakeVO.setNewVehicleMakeName(vehicleMake.getVehicleMakeName());
+        vehicleMakeVO.setNewVehicleMakeCreateDate(vehicleMake.getCreateDate());
+        vehicleMakeVO.setId(vehicleMake.getId());
 
-        model.addAttribute("vehicleMake", vehicleMake);
+        model.addAttribute("vehicleMakeVO", vehicleMakeVO);
         return "vehicleMakes/vehicleMakeEdit";
     }
 
+    @RequestMapping(value = "/VehicleMakes/Update", method = RequestMethod.POST)
+    public String vehicleMakeUpdate(VehicleMakeVO vehicleMakeVO, Model model) {
+        VehicleMake vehicleMake = vehicleMakeService.getVehicleMakeById(vehicleMakeVO.getId());
+        vehicleMake.setVehicleMakeName(vehicleMakeVO.getNewVehicleMakeName());
+        vehicleMake.setCreateDate(vehicleMakeVO.getNewVehicleMakeCreateDate());
+        vehicleMakeService.saveVehicleMake(vehicleMake);
 
+        System.out.println(vehicleMakeVO.getNewVehicleMakeName());
+        System.out.println(vehicleMakeVO.getId());
+
+        return "vehicleMakes/vehicleMakeEdit";
+    }
+        //todo: What I suspect is going on here is I am getting an exception because
+        // it will delete all children of this element. I need to make my interfaces for Vehicle Model and delete all of them before deleting the make
+    @RequestMapping(value = "/VehicleMakes/Delete/{id}", method = RequestMethod.GET)
+    public String vehicleMakeDelete(@PathVariable int id, Model model) {
+
+        VehicleMake vehicleMake = vehicleMakeService.getVehicleMakeById(id);
+        vehicleMakeService.deleteVehicleMake(vehicleMake.getId());
+
+        model.addAttribute("listAllVehicleMakes", vehicleMakeService.listAllVehicleMakes());
+
+        return "vehicleMakes/vehicleMakeList";
+    }
 
 //    region: Helper Methods
     private void logVehicleMakeVO(VehicleMakeVO vehicleMakeVO) {

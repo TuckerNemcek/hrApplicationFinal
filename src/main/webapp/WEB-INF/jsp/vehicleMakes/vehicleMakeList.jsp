@@ -22,9 +22,9 @@
                             <tr>
                                 <td>${vehicleMake.vehicleMakeName}</td>
                                 <td>${vehicleMake.createDate}</td>
-<%--                                Shouldn't I need to access the above with a getter? also why the fuck is it permanentyl gray?--%>
-                                <td>Edit</td>
-                                <td>Delete</td>
+<%--                                Shouldn't I need to access the above with a getter? also why the fuck is it permanently gray?--%>
+                                <td><a href="/VehicleMakes/Edit/${vehicleMake.id}">Edit</a> </td>
+                                <td><a href="/VehicleMakes/Delete/${vehicleMake.id}">Delete</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>

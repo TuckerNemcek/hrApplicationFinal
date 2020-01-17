@@ -50,6 +50,10 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
         VehicleMake Tesla = new VehicleMake();
         Tesla.setVehicleMakeName("Tesla");
         Tesla.setCreateDate(teslaDate);
+
+        VehicleMake DeleteMe = new VehicleMake();
+        DeleteMe.setVehicleMakeName("DeleteMe");
+        DeleteMe.setCreateDate(teslaDate);
         //endregion
 
         //region VEHICLE MODELS
@@ -109,6 +113,7 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
         vehicleList.add(soonMine);
 
         vehicleService.saveVehicleList(vehicleList);
+        vehicleMakeService.saveVehicleMake(DeleteMe);
 
     }
 }

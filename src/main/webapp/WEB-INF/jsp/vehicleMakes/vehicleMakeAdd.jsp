@@ -12,7 +12,7 @@
 
             <form:form cssClass="form-horizontal" modelAttribute="vehicleMakeVO" action="/VehicleMakes/Add" method="post">
                 <fieldset>
-                    <legend>Manage Vehicle Models</legend>
+                    <legend>Add a Vehicle Model</legend>
                     <div class="form-group">
                         <label for="inputNewVehicleMakeName" class="col-lg-2 control-label">Vehicle Model</label>
                         <div class="col-lg-10">
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="inputNewVehicleMakeCreateDate" class="col-lg-2 control-label">Date of Make (mm/dd/YYYY)</label>
+                        <label for="inputNewVehicleMakeCreateDate" class="col-lg-2 control-label">Date added to fleet (mm/dd/YYYY)</label>
                         <div class="col-lg-10">
                             <form:input path="newVehicleMakeCreateDate" type="date" class="form-control" rows="3" id="inputNewVehicleMakeCreateDate" pattern="YYYY-mm-dd" />
                         </div>
