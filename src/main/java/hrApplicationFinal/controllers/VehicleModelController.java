@@ -16,9 +16,9 @@ public class VehicleModelController {
 
     private Logger log = Logger.getLogger(VehicleModelController.class);
 
-    @RequestMapping(value ="/VehicleModel/List", method = RequestMethod.GET)
+    @RequestMapping(value ="/VehicleModels/List", method = RequestMethod.GET)
     public String vehicleModelList(Model model) {
-        model.addAttribute("ListAllVehicleModels", vehicleModelService.listAllVehicleModels());
+        model.addAttribute("listAllVehicleModels", vehicleModelService.listAllVehicleModels());
         return "vehicleModels/vehicleModelList";
     }
 }
