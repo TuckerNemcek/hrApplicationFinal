@@ -9,6 +9,8 @@
         <div id="main-wrapper" class="col-mid-11">
             <div class="col-lg-8 col-md-7 col-sm-6">
 
+                <h2>Vehicle Makes</h2>
+
 <%--                LIST OF EXISTING ELEMENTS--%>
                 <table class="table table-striped table-hover">
                     <thead>

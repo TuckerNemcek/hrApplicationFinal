@@ -4,30 +4,36 @@
 <div class="wrapper">
 
     <%--    SIDEBAR HERE--%>
-    <%@include file="vehicleModel_sidebar.jsp" %>
+    <%@include file="vehicle_sidebar.jsp" %>
 
     <div id="main-wrapper" class="col-mid-11">
         <div class="col-lg-8 col-md-7 col-sm-6">
 
-            <h2>Vehicle Models</h2>
+            <h2>Vehicles</h2>
 
 
         <%--                LIST OF EXISTING ELEMENTS--%>
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>Vehicle Model Name</th>
-                    <th>Make Name</th>
+                    <th>License Plate</th>
+                    <th>Color</th>
+                    <th>VIN number</th>
+                    <th>Year Acquired</th>
+                    <th>Model</th>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="vehicleModel" items="${listAllVehicleModels}">
+                <c:forEach var="vehicle" items="${listAllVehicles}">
                     <tr>
-                        <td>${vehicleModel.vehicleModelName}</td>
-                        <td>${vehicleModel.vehicleMake.vehicleMakeName}</td>
+                        <td>${vehicle.licensePlate}</td>
+                        <td>${vehicle.color}</td>
+                        <td>${vehicle.vin}</td>
+                        <td>${vehicle.yearProduced}</td>
+                        <td>${vehicle.vehicleModel.vehicleModelName}</td>
                             <%--                                Shouldn't I need to access the above with a getter? also why the fuck is it permanently gray?--%>
-                        <td><a href="/vehicleModels/Edit/${vehicleModel.id}">Edit Model</a> </td>
-                        <td><a href="/vehicleModels/Delete/${vehicleModel.id}">Delete Model</a></td>
+                        <td><a href="/VehicleMakes/Edit/${vehicle.id}">Edit</a> </td>
+                        <td><a href="/VehicleMakes/Delete/${vehicle.id}">Delete</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>

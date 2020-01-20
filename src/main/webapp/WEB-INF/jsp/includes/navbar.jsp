@@ -9,7 +9,7 @@
     <%--                    PAGE LINKS--%>
                         <li><a href="/VehicleMakes/List">Vehicle Makes</a></li>
                         <li><a href="/VehicleModels/List">Vehicle Models</a></li>
-                        <li><a href="/VehicleFleet">See Vehicle Fleet</a></li>
+                        <li><a href="/Vehicles/List">See Vehicle Fleet</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
     <%--                    LOGIN LINK--%>

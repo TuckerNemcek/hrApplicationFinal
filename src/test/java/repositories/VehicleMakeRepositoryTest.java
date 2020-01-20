@@ -3,6 +3,7 @@ package repositories;
 import hrApplicationFinal.configuration.RepositoryConfiguration;
 import hrApplicationFinal.domain.VehicleMake;
 import hrApplicationFinal.repositories.VehicleMakeRepository;
+import hrApplicationFinal.repositories.VehicleModelRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class VehicleMakeRepositoryTest {
 
     @Autowired
     private VehicleMakeRepository vehicleMakeRepository;
+    private VehicleModelRepository vehicleModelRepository;
 
     @Test
     public void testSaveVehicleMake() {
@@ -43,6 +45,8 @@ public class VehicleMakeRepositoryTest {
 
         VehicleMake updatedVehicleMake = vehicleMakeRepository.findOne(fetchedVeMake.getId());
         assertEquals(updatedVehicleMake.getVehicleMakeName(), "Honda");
+
+
     }
 
 }
