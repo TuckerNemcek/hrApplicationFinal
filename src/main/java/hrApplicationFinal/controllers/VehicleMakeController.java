@@ -59,8 +59,8 @@ public class VehicleMakeController {
         vehicleMake.setCreateDate(vehicleMakeVO.getNewVehicleMakeCreateDate());
         vehicleMakeService.saveVehicleMake(vehicleMake);
 
-        System.out.println(vehicleMakeVO.getNewVehicleMakeName());
-        System.out.println(vehicleMakeVO.getId());
+//        System.out.println(vehicleMakeVO.getNewVehicleMakeName());
+//        System.out.println(vehicleMakeVO.getId());
 
         return "vehicleMakes/vehicleMakeEdit";
     }

@@ -25,7 +25,7 @@
                         <div class="col-lg-10 col-lg-offset-2 blackText">
                             <form:select path="vehicleMake">
                                 <c:forEach items="${vehicleMakeList}" var="vehicleMake">
-                                    <form:options id="inputVehicleMake" value="${vehicleMake.id}">${vehicleMake.vehicleMakeName}</form:options>
+                                    <form:option id="inputVehicleMake" value="${vehicleMake.id}">${vehicleMake.vehicleMakeName}</form:option>
                                 </c:forEach>
                             </form:select>
                         </div>

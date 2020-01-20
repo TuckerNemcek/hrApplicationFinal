@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -51,6 +52,35 @@ public class VehicleModelController {
         model.addAttribute("vehicleMakeList", vehicleMakeService.listAllVehicleMakes());
 
         return "vehicleModels/vehicleModelAdd";
+    }
+
+    @RequestMapping(value = "/VehicleModels/Edit/{id}", method = RequestMethod.GET)
+    public String vehicleModelEdit(@PathVariable int id, Model model, VehicleModelVO vehicleModelVO) {
+        VehicleModel vehicleModel = vehicleModelService.getVehicleModelById(id);
+        vehicleModelVO.setNewVehicleModelName((vehicleModel.getVehicleModelName()));
+        vehicleModelVO.setVehicleMake(vehicleModel.getVehicleMake());
+        vehicleModelVO.setId(vehicleModel.getId());
+
+        model.addAttribute("vehicleMakeList", vehicleMakeService.listAllVehicleMakes());
+
+        model.addAttribute("vehicleModelVO", vehicleModelVO);
+        return "vehicleModels/vehicleModelEdit";
+    }
+
+    @RequestMapping(value = "/VehicleModels/Update", method = RequestMethod.POST)
+    public String vehicleModelUpdate(VehicleModelVO vehicleModelVO, Model model) {
+        VehicleModel vehicleModel = vehicleModelService.getVehicleModelById(vehicleModelVO.getId());
+        vehicleModel.setVehicleModelName(vehicleModelVO.getNewVehicleModelName());
+        vehicleModel.setVeModelId(vehicleModelVO.getId());
+        vehicleModel.setVehicleMake(vehicleModelVO.getVehicleMake());
+        vehicleModelService.saveVehicleModel(vehicleModel);
+
+//        System.out.println(vehicleModelVO.getNewVehicleModelName());
+
+        model.addAttribute("vehicleMakeList", vehicleMakeService.listAllVehicleMakes());
+
+        return "vehicleModels/vehicleModelEdit";
+
     }
 
 }
