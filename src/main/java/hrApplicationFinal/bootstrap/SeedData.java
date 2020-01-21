@@ -76,28 +76,28 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
 
         //region SPECIFIC VEHICLES
         Vehicle momsJeep = new Vehicle();
-        momsJeep.setYearProduced(2015);
+        momsJeep.setYearProduced(teslaDate);
         momsJeep.setColor("Blue");
         momsJeep.setLicensePlate("998-CQC");
         momsJeep.setVin("17965874123574");
         momsJeep.setVehicleModel(Grand_Cherokee);
 
         Vehicle myJeep = new Vehicle();
-        myJeep.setYearProduced(2011);
+        myJeep.setYearProduced(teslaDate);
         myJeep.setColor("Black");
         myJeep.setLicensePlate("923-ABC");
         myJeep.setVin("41575369875234");
         myJeep.setVehicleModel(Liberty);
 
         Vehicle theNova = new Vehicle();
-        theNova.setYearProduced(1977);
+        theNova.setYearProduced(teslaDate);
         theNova.setColor("Puke Yellow");
         theNova.setLicensePlate("245-DJN");
         theNova.setVin("87436587419632");
         theNova.setVehicleModel(Nova);
 
         Vehicle soonMine = new Vehicle();
-        soonMine.setYearProduced(2019);
+        soonMine.setYearProduced(teslaDate);
         soonMine.setColor("Silver");
         soonMine.setLicensePlate("JVASCRPT");
         soonMine.setVin("72591463879635");
@@ -112,8 +112,21 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
         vehicleList.add(theNova);
         vehicleList.add(soonMine);
 
+        List<VehicleMake> vehicleMakeList = new ArrayList<>();
+        vehicleMakeList.add(Jeep);
+        vehicleMakeList.add(Chevy);
+        vehicleMakeList.add(Tesla);
+        vehicleMakeList.add(DeleteMe);
+
+        List<VehicleModel> vehicleModelList = new ArrayList<>();
+        vehicleModelList.add(Liberty);
+        vehicleModelList.add(Grand_Cherokee);
+        vehicleModelList.add(Nova);
+        vehicleModelList.add(Model3);
+
+        vehicleMakeService.saveVehicleMakeList(vehicleMakeList);
+        vehicleModelService.saveVehicleModelList(vehicleModelList);
         vehicleService.saveVehicleList(vehicleList);
-        vehicleMakeService.saveVehicleMake(DeleteMe);
 
     }
 }

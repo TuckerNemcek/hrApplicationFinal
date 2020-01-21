@@ -37,4 +37,6 @@ public class VehicleServiceImpl implements VehicleService {
     public void deleteVehicle(Integer id) {
         vehicleRepository.delete(id);
     }
+
+
 }

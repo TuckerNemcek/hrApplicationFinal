@@ -2,8 +2,12 @@ package hrApplicationFinal.controllers;
 
 import hrApplicationFinal.domain.VO.VehicleMakeVO;
 import hrApplicationFinal.domain.VO.VehicleMakeVO;
+import hrApplicationFinal.domain.Vehicle;
 import hrApplicationFinal.domain.VehicleMake;
+import hrApplicationFinal.domain.VehicleModel;
 import hrApplicationFinal.services.VehicleMakeService;
+import hrApplicationFinal.services.VehicleModelService;
+import hrApplicationFinal.services.VehicleService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +22,12 @@ public class VehicleMakeController {
 
     @Autowired
     private VehicleMakeService vehicleMakeService;
+
+    @Autowired
+    private VehicleModelService vehicleModelService;
+
+    @Autowired
+    private VehicleService vehicleService;
 
     private Logger log = Logger.getLogger(VehicleMakeController.class);
 
@@ -64,17 +74,29 @@ public class VehicleMakeController {
 
         return "vehicleMakes/vehicleMakeEdit";
     }
-        //todo: What I suspect is going on here is I am getting an exception because
-        // it will delete all children of this element. I need to make my interfaces for Vehicle Model and delete all of them before deleting the make
+
     @RequestMapping(value = "/VehicleMakes/Delete/{id}", method = RequestMethod.GET)
-    public String vehicleMakeDelete(@PathVariable int id, Model model) {
+    public String vehicleMakeDelete(@PathVariable int id) {
 
-        VehicleMake vehicleMake = vehicleMakeService.getVehicleMakeById(id);
-        vehicleMakeService.deleteVehicleMake(vehicleMake.getId());
+        Iterable<Vehicle> vehicleList = vehicleService.listAllVehicles();
+        Iterable<VehicleModel> vehicleModelList = vehicleModelService.listAllVehicleModels();
 
-        model.addAttribute("listAllVehicleMakes", vehicleMakeService.listAllVehicleMakes());
+        VehicleMake delVehicleMake = vehicleMakeService.getVehicleMakeById(id);
 
-        return "vehicleMakes/vehicleMakeList";
+        for(Vehicle vehicle : vehicleList) {
+            if(vehicle.getVehicleModel().getVehicleMake().getId().equals(delVehicleMake.getId())){
+                vehicleService.deleteVehicle(vehicle.getId());
+            }
+        }
+        for(VehicleModel vehicleModel : vehicleModelList) {
+            if(vehicleModel.getVehicleMake().getId().equals(delVehicleMake.getId())){
+                vehicleModelService.deleteVehicleModel(vehicleModel.getId());
+            }
+        }
+        vehicleMakeService.deleteVehicleMake(delVehicleMake.getId());
+
+
+        return "redirect:/VehicleMakes/List";
     }
 
 //    region: Helper Methods
@@ -83,7 +105,7 @@ public class VehicleMakeController {
         log.info("New VehicleMake Create Date:" + vehicleMakeVO.getNewVehicleMakeCreateDate());
     }
 
-    private void saveVehicleMakeFromVehicleMakeVO(VehicleMakeVO vehicleMakeVO) {
+    private String saveVehicleMakeFromVehicleMakeVO(VehicleMakeVO vehicleMakeVO) {
         VehicleMake newVehicleMake = new VehicleMake();
 
         newVehicleMake.setVehicleMakeName(vehicleMakeVO.getNewVehicleMakeName());
@@ -91,6 +113,7 @@ public class VehicleMakeController {
 
         vehicleMakeService.saveVehicleMake(newVehicleMake);
 
+        return "redirect:/VehicleMakes/List";
     }
     //endregion
 }

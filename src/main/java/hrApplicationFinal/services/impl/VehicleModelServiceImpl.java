@@ -34,6 +34,8 @@ public class VehicleModelServiceImpl implements VehicleModelService {
 
     @Override
     public void deleteVehicleModel(Integer id) {
-        deleteVehicleModel(id);
+        vehicleModelRepository.delete(id);
     }
+
+
 }

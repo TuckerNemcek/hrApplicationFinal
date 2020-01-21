@@ -8,7 +8,7 @@ public class VehicleMake {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "VehicleMakeId")
+    @Column(name = "VehicleMakeId", unique = true, nullable = false)
     private Integer id;
 
     @Version
@@ -16,6 +16,8 @@ public class VehicleMake {
 
     private String VehicleMakeName;
     private Date CreateDate;
+
+
 
     //CONSTRUCTORS
     public VehicleMake(){}

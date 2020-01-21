@@ -1,11 +1,21 @@
 package hrApplicationFinal.domain.VO;
 
+import hrApplicationFinal.domain.VehicleModel;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 public class VehicleVO {
 
     private Integer id;
-    private int YearProduced;
+
+
+    private String licensePlate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date YearProduced;
     private String Vin;
     private String Color;
+    private VehicleModel vehicleModel;
 
     public VehicleVO () {}
 
@@ -17,11 +27,11 @@ public class VehicleVO {
         this.id = id;
     }
 
-    public int getYearProduced() {
+    public Date getYearProduced() {
         return YearProduced;
     }
 
-    public void setYearProduced(int yearProduced) {
+    public void setYearProduced(Date yearProduced) {
         YearProduced = yearProduced;
     }
 
@@ -39,5 +49,21 @@ public class VehicleVO {
 
     public void setColor(String color) {
         Color = color;
+    }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
+
+    public VehicleModel getVehicleModel() {
+        return vehicleModel;
+    }
+
+    public void setVehicleModel(VehicleModel vehicleModel) {
+        this.vehicleModel = vehicleModel;
     }
 }

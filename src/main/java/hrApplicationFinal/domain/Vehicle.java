@@ -8,23 +8,23 @@ public class Vehicle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "VehicleId")
+    @Column(name = "VehicleId", unique = true, nullable = false)
     private Integer id;
 
     @Version
     private Integer version;
 
-    private int YearProduced;
+    private Date YearProduced;
     private String LicensePlate;
     private String Vin;
     private String Color;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(fetch = FetchType.EAGER)
     private VehicleModel vehicleModel;
 
     //CONSTRUCTORS
     public Vehicle(){}
-    public Vehicle(int year, String licensePlate, String vin, String color, VehicleModel vehicleModel) {
+    public Vehicle(Date year, String licensePlate, String vin, String color, VehicleModel vehicleModel) {
         this.setYearProduced(year);
         this.setLicensePlate(licensePlate);
         this.setVin(vin);
@@ -49,11 +49,11 @@ public class Vehicle {
         this.version = version;
     }
 
-    public int getYearProduced() {
+    public Date getYearProduced() {
         return YearProduced;
     }
 
-    public void setYearProduced(int yearProduced) {
+    public void setYearProduced(Date yearProduced) {
         YearProduced = yearProduced;
     }
 

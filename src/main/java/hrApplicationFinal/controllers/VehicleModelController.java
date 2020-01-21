@@ -2,10 +2,12 @@ package hrApplicationFinal.controllers;
 
 import hrApplicationFinal.domain.VO.VehicleMakeVO;
 import hrApplicationFinal.domain.VO.VehicleModelVO;
+import hrApplicationFinal.domain.Vehicle;
 import hrApplicationFinal.domain.VehicleMake;
 import hrApplicationFinal.domain.VehicleModel;
 import hrApplicationFinal.services.VehicleMakeService;
 import hrApplicationFinal.services.VehicleModelService;
+import hrApplicationFinal.services.VehicleService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,9 @@ public class VehicleModelController {
 
     @Autowired
     private VehicleMakeService vehicleMakeService;
+
+    @Autowired
+    private VehicleService vehicleService;
 
     private Logger log = Logger.getLogger(VehicleModelController.class);
 
@@ -80,6 +85,24 @@ public class VehicleModelController {
         model.addAttribute("vehicleMakeList", vehicleMakeService.listAllVehicleMakes());
 
         return "vehicleModels/vehicleModelEdit";
+    }
+
+    @RequestMapping(value ="/VehicleModels/Delete/{id}", method = RequestMethod.GET)
+    public  String vehicleModelDelete(@PathVariable int id) {
+
+        Iterable<Vehicle> vehicleList = vehicleService.listAllVehicles();
+
+        VehicleModel delVehicleModel = vehicleModelService.getVehicleModelById(id);
+
+        for(Vehicle vehicle : vehicleList) {
+            if(vehicle.getVehicleModel().getId().equals(delVehicleModel.getId())){
+                vehicleService.deleteVehicle(vehicle.getId());
+            }
+        }
+
+        vehicleModelService.deleteVehicleModel(delVehicleModel.getId());
+
+        return "redirect:/VehicleModels/List";
 
     }
 

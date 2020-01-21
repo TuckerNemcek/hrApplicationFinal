@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VehicleRepository extends CrudRepository<Vehicle, Integer> {
+    void deleteById(int id);
 }

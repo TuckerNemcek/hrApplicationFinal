@@ -7,12 +7,12 @@ public class VehicleModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "VehicleModelId")
+    @Column(name = "VehicleModelId", unique = true, nullable = false)
     private Integer id;
 
     private String VehicleModelName;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     private VehicleMake vehicleMake;
 
     @Version
